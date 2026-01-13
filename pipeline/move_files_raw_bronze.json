@@ -97,7 +97,13 @@
 							"inputs": [
 								{
 									"referenceName": "raw_files",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"file_name": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
