@@ -113,7 +113,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"file_dir": {
-											"value": "@replace(item(), '.csv', '')",
+											"value": "@replace(item().file_name, '.csv', '')",
 											"type": "Expression"
 										}
 									}
