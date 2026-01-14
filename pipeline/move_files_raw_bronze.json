@@ -24,6 +24,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -109,7 +110,13 @@
 							"outputs": [
 								{
 									"referenceName": "bronze_files",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"file_dir": {
+											"value": "@replace(item(), '.csv', '')",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
